@@ -27,7 +27,7 @@ class WaitActivity : AppCompatActivity() {
                 val entiretask = editText.text.toString()
                 val task = "Task"
                 Task(entiretask)
-                database1.child("users").child(task).setValue(entiretask)
+                database1.child("users").child(task).push().setValue(entiretask)
             }
             else{
                 Toast.makeText(this, "Failed to submit please try again",Toast.LENGTH_SHORT).show()
